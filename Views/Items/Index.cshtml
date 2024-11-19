@@ -1,0 +1,22 @@
+﻿@using WebApplication.Models
+@model List<Item>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Nombre:
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model.OrderBy(u=>u.Id))
+        {
+        <tr>
+            <td>
+                @obj.Name
+            </td>
+            </tr>
+        }
+    </tbody>
+</table>
