@@ -2,14 +2,15 @@
 @model Item
 
 <form method="post">
+    <input asp-for="Id" hidden />
     <div class="row">
-        <h2>Create Item</h2>
+        <h2>Edit Item</h2>
         <hr />
     </div>
     <div asp-validation-summary="All"></div>
     <div>
         <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control"/>
+        <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div>
@@ -18,13 +19,13 @@
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
     <div class="row">
-        <button type="submit" class="form-control">Create</button>
+        <button type="submit" class="form-control">Edit</button>
         <a asp-controller="Items" asp-action="Index" class="btn btn-dark">List</a>
     </div>
 
 </form>
 
-@section Scripts{
+@section Scripts {
     @{
         <partial name="_ValidationScriptsPartial"></partial>
     }

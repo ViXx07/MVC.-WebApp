@@ -5,7 +5,10 @@
     <thead>
         <tr>
             <th>
-                Nombre:
+                Name:
+            </th>
+            <th>
+                Description:
             </th>
         </tr>
     </thead>
@@ -16,7 +19,16 @@
             <td>
                 @obj.Name
             </td>
-            </tr>
+            <td>
+                @obj.Description
+            </td>
+            <td>
+                <a asp-controller="Items" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-warning">Edit</a>
+            </td>
+            <td>
+                    <a asp-controller="Items" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>

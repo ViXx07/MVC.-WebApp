@@ -1,0 +1,26 @@
+﻿@using WebApplication.Models
+@model Item
+
+<form method="post">
+    <input asp-for="Id" hidden/>
+    <div class="row">
+        <h2>Delete Item</h2>
+        <hr />
+    </div>
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" disabled/>
+
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" disabled/>
+    </div>
+    <div class="row">
+        <button type="submit" class="form-control btn-danger">Delete</button>
+        <a asp-controller="Items" asp-action="Index" class="btn btn-black">List</a>
+    </div>
+
+</form>
+
